@@ -1,24 +1,35 @@
 (() => {
+    const __fxMissing = () => {
+        const missing = [];
+        if (typeof c === "undefined" || !c) missing.push("c");
+        if (typeof y === "undefined" || !y) missing.push("y");
+        if (typeof aa === "undefined" || !aa) missing.push("aa");
+        if (typeof a0f === "undefined" || !a0f) missing.push("a0f");
+        if (typeof a0n === "undefined" || !a0n) missing.push("a0n");
+        if (typeof ss === "undefined" || !ss || !ss.a1M) missing.push("ss.a1M");
+        if (typeof nl === "undefined" || !nl) missing.push("nl");
+        if (typeof j1 === "undefined" || !j1) missing.push("j1");
+        if (typeof ix === "undefined" || !ix) missing.push("ix");
+        if (typeof jZ === "undefined" || !jZ || !jZ.fH || !jZ.lp) missing.push("jZ.fH/jZ.lp");
+        if (typeof bc === "undefined" || !bc || typeof bc.b8 !== "function") missing.push("bc.b8");
+        if (typeof yB === "undefined" || !yB) missing.push("yB");
+        if (typeof pz === "undefined" || !pz) missing.push("pz");
+        if (typeof gW === "undefined" || !gW) missing.push("gW");
+        if (!window.__fx || !window.__fx.autoOpening) missing.push("__fx.autoOpening");
+        return missing;
+    };
+
     const __fxInstall = () => {
         if (window.__fxBridgeInstalled) return true;
-        if (typeof c === "undefined" || !c
-            || typeof y === "undefined" || !y
-            || typeof aa === "undefined" || !aa
-            || typeof a0f === "undefined" || !a0f
-            || typeof a0n === "undefined" || !a0n
-            || typeof ss === "undefined" || !ss || !ss.a1M
-            || typeof nl === "undefined" || !nl
-            || typeof j1 === "undefined" || !j1
-            || typeof ix === "undefined" || !ix
-            || typeof jZ === "undefined" || !jZ || !jZ.fH || !jZ.lp
-            || typeof bc === "undefined" || !bc || typeof bc.b8 !== "function"
-            || typeof yB === "undefined" || !yB
-            || typeof pz === "undefined" || !pz
-            || typeof gW === "undefined" || !gW) return false;
-        const __fx = window.__fx;
-        if (!__fx || !__fx.autoOpening) return false;
+        const missing = __fxMissing();
+        if (missing.length) {
+            window.__fxBridgeMissing = missing;
+            return false;
+        }
+        try {
+            const __fx = window.__fx;
 
-        const o = {
+            const o = {
     get bI() { return c.c2 },
     get cF() { return c.aI },
     get co() { return c.t },
@@ -63,7 +74,7 @@ const f2 = { aw: { a5e: (...args) => jZ.fH.lZ(...args), get p4() { return jZ.fH.
 const dY = { get p5() { return bc.yR == null ? null : { get ww() { return bc.yR.sS } } }, hw: (...args) => bc.ql(...args) };
 const ar = yB, cQ = { get cl() { return pz.qH } }, p = { get eP() { return gW.gX }, get eQ() { return gW.gY }, get eR() { return gW.kY } };
 
-        const __fxOriginalAttack=ss.a1M.xn;ss.a1M.xn=function(amount,target,...args){const player=o.co,balance=Math.max(0,Math.floor(Number(eF.fa[player])||0)),result=__fxOriginalAttack.call(this,amount,target,...args);__fx.autoOpening.onAttackApplied?.({local:true,neutral:Number(target)===o.bI,attackerId:player,targetId:Number(target),amount:Number(amount),troops:Math.floor(balance*(Number(amount)+1)/1024),tick:(Number.isFinite(__fx.currentGameTick)?__fx.currentGameTick:0)+1});return result};
+            const __fxOriginalAttack=ss.a1M.xn;ss.a1M.xn=function(amount,target,...args){const player=o.co,balance=Math.max(0,Math.floor(Number(eF.fa[player])||0)),result=__fxOriginalAttack.call(this,amount,target,...args);__fx.autoOpening.onAttackApplied?.({local:true,neutral:Number(target)===o.bI,attackerId:player,targetId:Number(target),amount:Number(amount),troops:Math.floor(balance*(Number(amount)+1)/1024),tick:(Number.isFinite(__fx.currentGameTick)?__fx.currentGameTick:0)+1});return result};
 const __fxHasBorderState=player=>Number.isInteger(player)&&player>=0&&player<o.bI&&eF.aOq!=null&&eF.aOq[player]!=null;
 const __fxHasLivePlayer=player=>__fxHasBorderState(player)&&w.cO.iV(player)&&eF.fQ[player]>0;
 const __fxSharesAutoMicroBorder=(player,id)=>{if(!__fxHasBorderState(player)||!__fxHasBorderState(id))return false;const playerBorder=eF.aOq[player],targetBorder=eF.aOq[id],scanTarget=targetBorder.length<playerBorder.length,border=scanTarget?targetBorder:playerBorder,owner=scanTarget?player:id,offsets=ee.iH;for(let index=0;index<border.length;index++)for(let side=3;side>=0;side--){const pixel=border[index]+offsets[side];if(ee.mR(owner,pixel))return true}return false};
@@ -88,33 +99,39 @@ __fx.autoOpening.messiah={getState:()=>{const player=o.co;return{playerAlive:__f
 const __fxGetAutoSpawnStatus=()=>{const player=o.co,connected=o.kg||f2.aw.a5e(f2.aw.p4),selectableSpawn=Boolean(o.db&&w.cO.iT(0)),ready=connected&&selectableSpawn&&!o.ke&&Number.isInteger(player)&&player>=0&&player<o.bI&&eF.hu[player]!==0;if(!ready)return{ready:false,singleplayer:o.kg,connected:connected,selectableSpawn:selectableSpawn};const selectionStep=Number.isInteger(dY.p5&&dY.p5.ww)?dY.p5.ww:null,selectionMax=Number.isInteger(o.x1)?o.x1:null,currentSpawn=eF.fQ[player]>0?{x:(eF.eG[player]+eF.eH[player])>>1,y:(eF.eJ[player]+eF.eK[player])>>1}:null;return{ready:true,singleplayer:o.kg,connected:connected,selectableSpawn:selectableSpawn,gameMode:o.fW,mapId:p.eR,isOneVsOne:o.fW===8,currentSpawn:currentSpawn,selectionStep:selectionStep,selectionMax:selectionMax,selectionRemaining:selectionStep===null||selectionMax===null?null:Math.max(0,selectionMax-selectionStep)}};__fx.autoSpawn={getStatus:__fxGetAutoSpawnStatus,getState:()=>{const status=__fxGetAutoSpawnStatus();if(!status.ready)return status;const player=o.co,width=p.eP,height=p.eQ,freeLand=new Uint8Array(width*height),ownableLand=new Uint8Array(width*height),spawns=[];for(let y=0;y<height;y++)for(let x=0;x<width;x++){const pixel=ee.mQ(x,y),ownable=ee.lV(pixel);ownableLand[y*width+x]=ownable?1:0;freeLand[y*width+x]=ownable&&(!ee.mU(pixel)||ee.sV(player,pixel))?1:0}for(let id=0;id<o.bI;id++)if(id!==player&&eF.fQ[id]>0)spawns.push({id:id,x:(eF.eG[id]+eF.eH[id])>>1,y:(eF.eJ[id]+eF.eK[id])>>1,land:eF.fQ[id],human:id<o.cF,bot:id>=o.cF});return{...status,width:width,height:height,freeLand:freeLand,ownableLand:ownableLand,spawns:spawns,humanCount:o.cF,playerCount:o.cF,entityCount:o.bI}},spawn:(x,y)=>{const player=o.co,px=Math.round(Number(x)),py=Math.round(Number(y));if(!o.db||o.ke||(!o.kg&&!f2.aw.a5e(f2.aw.p4))||!Number.isInteger(px)||!Number.isInteger(py)||px<0||py<0||px>=p.eP||py>=p.eQ||!w.cO.iT(0)||!w.cO.iV(player))return false;const pixel=ee.mQ(px,py);if(!ee.lV(pixel)||ee.mU(pixel))return false;const cell=eN.ed(px,py);return eN.aCm(cell)?(o.kg||f2.aw.aA7(f2.aw.p4),pH.a2J.aKX(cell),true):false}};
 const __fxDecodedAutoSpawnState=__fx.autoSpawn.getState;__fx.autoSpawn.getState=()=>{const state=__fxDecodedAutoSpawnState();if(!state?.ready)return state;for(const spawn of state.spawns){spawn.human=spawn.id<o.cF;spawn.bot=spawn.id>=o.cF}state.humanCount=o.cF;state.playerCount=o.cF;state.entityCount=o.bI;return state};
 
-        const __fxOriginalTick = bc.b8;
-        bc.b8 = function () {
-            const result = __fxOriginalTick.apply(this, arguments);
-            const tick = bc.ql();
-            __fx.currentGameTick = tick;
-            try {
-                __fx.autoOpening?.onTick?.(tick);
-            } catch (error) {
-                console.error("[retardoclient] onTick failed", error);
-            }
-            return result;
-        };
-
-        if (jZ.lp && typeof jZ.lp.lq === "function") {
-            const __fxOriginalDecode = jZ.lp.lq;
-            jZ.lp.lq = function (...args) {
-                const result = __fxOriginalDecode.apply(this, args);
+            const __fxOriginalTick = bc.b8;
+            bc.b8 = function () {
+                const result = __fxOriginalTick.apply(this, arguments);
+                const tick = bc.ql();
+                __fx.currentGameTick = tick;
                 try {
-                    __fx.autoSpawnController?.onDecodedPacket?.(this, args[1]);
+                    __fx.autoOpening?.onTick?.(tick);
                 } catch (error) {
-                    console.error("[retardoclient] onDecodedPacket failed", error);
+                    console.error("[retardoclient] onTick failed", error);
                 }
                 return result;
             };
+
+            if (jZ.lp && typeof jZ.lp.lq === "function") {
+                const __fxOriginalDecode = jZ.lp.lq;
+                jZ.lp.lq = function (...args) {
+                    const result = __fxOriginalDecode.apply(this, args);
+                    try {
+                        __fx.autoSpawnController?.onDecodedPacket?.(this, args[1]);
+                    } catch (error) {
+                        console.error("[retardoclient] onDecodedPacket failed", error);
+                    }
+                    return result;
+                };
+            }
+        } catch (error) {
+            window.__fxBridgeError = String((error && error.message) || error);
+            console.error("[retardoclient] bridge install failed - game internals changed:", error);
+            return true;
         }
 
         window.__fxBridgeInstalled = true;
+        try { delete window.__fxBridgeMissing; } catch (error) {}
         console.log("[retardoclient] game bridge installed");
         return true;
     };
@@ -132,5 +149,10 @@ const __fxDecodedAutoSpawnState=__fx.autoSpawn.getState;__fx.autoSpawn.getState=
     const __fxBridgeTimer = setInterval(() => {
         if (__fxInstall()) clearInterval(__fxBridgeTimer);
     }, 200);
-    setTimeout(() => clearInterval(__fxBridgeTimer), 30000);
+    setTimeout(() => {
+        clearInterval(__fxBridgeTimer);
+        if (!window.__fxBridgeInstalled && !window.__fxBridgeError) {
+            console.error("[retardoclient] bridge did not install within 30s. Missing or renamed game internals:", window.__fxBridgeMissing || "unknown");
+        }
+    }, 30000);
 })();
