@@ -1,20 +1,20 @@
 (() => {
     const __fxMissing = () => {
         const missing = [];
-        if (typeof c === "undefined" || !c) missing.push("c");
-        if (typeof y === "undefined" || !y) missing.push("y");
-        if (typeof aa === "undefined" || !aa) missing.push("aa");
-        if (typeof a0f === "undefined" || !a0f) missing.push("a0f");
-        if (typeof a0n === "undefined" || !a0n) missing.push("a0n");
-        if (typeof ss === "undefined" || !ss || !ss.a1M) missing.push("ss.a1M");
-        if (typeof nl === "undefined" || !nl) missing.push("nl");
-        if (typeof j1 === "undefined" || !j1) missing.push("j1");
-        if (typeof ix === "undefined" || !ix) missing.push("ix");
-        if (typeof jZ === "undefined" || !jZ || !jZ.fH || !jZ.lp) missing.push("jZ.fH/jZ.lp");
-        if (typeof bc === "undefined" || !bc || typeof bc.b8 !== "function") missing.push("bc.b8");
-        if (typeof yB === "undefined" || !yB) missing.push("yB");
-        if (typeof pz === "undefined" || !pz) missing.push("pz");
-        if (typeof gW === "undefined" || !gW) missing.push("gW");
+        if (typeof d4 === "undefined" || !d4) missing.push("d4");
+        if (typeof dA === "undefined" || !dA) missing.push("dA");
+        if (typeof bK === "undefined" || !bK) missing.push("bK");
+        if (typeof jS === "undefined" || !jS) missing.push("jS");
+        if (typeof k2 === "undefined" || !k2) missing.push("k2");
+        if (typeof ko === "undefined" || !ko || !ko.zg) missing.push("ko.zg");
+        if (typeof fZ === "undefined" || !fZ) missing.push("fZ");
+        if (typeof dK === "undefined" || !dK) missing.push("dK");
+        if (typeof dI === "undefined" || !dI) missing.push("dI");
+        if (typeof cr === "undefined" || !cr || !cr.bf || !cr.rw) missing.push("cr.bf/cr.rw");
+        if (typeof n === "undefined" || !n || typeof n.kK !== "function") missing.push("n.kK");
+        if (typeof k8 === "undefined" || !k8) missing.push("k8");
+        if (typeof ob === "undefined" || !ob) missing.push("ob");
+        if (typeof l === "undefined" || !l) missing.push("l");
         if (!window.__fx || !window.__fx.autoOpening) missing.push("__fx.autoOpening");
         return missing;
     };
@@ -30,51 +30,52 @@
             const __fx = window.__fx;
 
             const o = {
-    get bI() { return c.c2 },
-    get cF() { return c.aI },
-    get co() { return c.t },
-    get kg() { return c.aH },
-    get ke() { return c.bl },
-    get fW() { return c.d },
-    get fS() { return c.aP },
-    get db() { return c.ao },
-    get x1() { return c.bk },
-    get fT() { return c.bJ }
+    get bI() { return d4.jW },
+    get cF() { return d4.j6 },
+    get co() { return d4.jL },
+    get kg() { return d4.iC },
+    get ke() { return d4.g2 },
+    get fW() { return d4.mr },
+    get fS() { return d4.kD },
+    get db() { return d4.iA },
+    get x1() { return d4.n5 },
+    get fT() { return d4.jD }
 };
 const eF = {
-    get aOq() { return y.xT },
-    get fQ() { return y.aO },
-    get fa() { return y.ax },
-    get hu() { return y.an },
-    get eG() { return y.oE },
-    get eJ() { return y.oG },
-    get eH() { return y.oF },
-    get eK() { return y.oH }
+    get aOq() { return dA.kC },
+    get fQ() { return dA.j8 },
+    get fa() { return dA.k9 },
+    get hu() { return dA.iR },
+    get eG() { return dA.j9 },
+    get eJ() { return dA.jB },
+    get eH() { return dA.jA },
+    get eK() { return dA.jC }
 };
-const w = { cO: { iT: (...args) => aa.bY.a1D(...args), iV: (...args) => aa.bY.bZ(...args), jD: (...args) => aa.bY.aTe(...args) } };
-const jG = { jH: (...args) => a0f.a1W(...args), aQO: (...args) => a0f.a1T(...args), aQP: (...args) => a0f.a1X(...args) };
-const lF = { cY: (...args) => a0n.q5(...args), cL: (...args) => a0n.pv(...args), ca: (...args) => a0n.q7(...args) };
-const pH = { a2J: { a7g: (...args) => ss.a1M.xn(...args), a7e: (...args) => ss.a1M.xr(...args), aKX: (...args) => ss.a1M.xm(...args) } };
-const kX = { a7h: (...args) => nl.a1R(...args) };
+const w = { cO: { iT: (...args) => bK.dl.zU(...args), iV: (...args) => bK.dl.mz(...args), jD: (...args) => bK.dl.og(...args) } };
+const jG = { jH: (...args) => jS.jT(...args), aQO: (...args) => jS.zl(...args), aQP: (...args) => jS.zq(...args) };
+const lF = { cY: (...args) => k2.a6p(...args), cL: (...args) => k2.a6s(...args), ca: (...args) => k2.zn(...args) };
+const pH = { a2J: { a7g: (...args) => ko.zg.zm(...args), a7e: (...args) => ko.zg.aJc(...args), aKX: (...args) => ko.zg.zh(...args) } };
+const kX = { a7h: (...args) => fZ.lt(...args) };
 const ee = {
-    get iH() { return j1.a1g },
-    mR: (...args) => j1.a5q(...args),
-    lb: (...args) => j1.zb(...args),
-    mQ: (...args) => j1.aT3(...args),
-    lZ: (...args) => j1.zY(...args),
-    la: (...args) => j1.zZ(...args),
-    wd: (...args) => j1.g7(...args),
-    we: (...args) => j1.g8(...args),
-    lV: (...args) => j1.uZ(...args),
-    mU: (...args) => j1.aT4(...args),
-    sV: (...args) => j1.aAW(...args)
+    get iH() { return dK.jZ },
+    mR: (...args) => dK.yI(...args),
+    lb: (...args) => dK.jQ(...args),
+    mQ: (...args) => dK.xW(...args),
+    lZ: (...args) => dK.yH(...args),
+    la: (...args) => dK.jR(...args),
+    wd: (...args) => dK.iu(...args),
+    we: (...args) => dK.iv(...args),
+    lV: (...args) => dK.dL(...args),
+    mU: (...args) => dK.yL(...args),
+    sV: (...args) => dK.yJ(...args)
 };
-const eN = { ed: (...args) => ix.oR(...args), aCm: (...args) => ix.a3f(...args) };
-const f2 = { aw: { a5e: (...args) => jZ.fH.lZ(...args), get p4() { return jZ.fH.qt }, aA7: (...args) => jZ.fH.a8K(...args) } };
-const dY = { get p5() { return bc.yR == null ? null : { get ww() { return bc.yR.sS } } }, hw: (...args) => bc.ql(...args) };
-const ar = yB, cQ = { get cl() { return pz.qH } }, p = { get eP() { return gW.gX }, get eQ() { return gW.gY }, get eR() { return gW.kY } };
+const eN = { ed: (...args) => dI.jm(...args), aCm: (...args) => dI.aI9(...args) };
+const f2 = { aw: { a5e: (...args) => cr.bf.a1X(...args), get p4() { return cr.bf.fH }, aA7: (...args) => cr.bf.fG(...args) } };
+const dY = { get p5() { return n.qQ == null ? null : { get ww() { return n.qQ.aPn } } }, hw: (...args) => n.kg(...args) };
+const ar = k8, cQ = { get cl() { return ob.oy } }, p = { get eP() { return l.aH }, get eQ() { return l.aJ }, get eR() { return l.gF } };
+const __fxAttackHost = ko.zg, __fxAttackName = "zm";
 
-            const __fxOriginalAttack=ss.a1M.xn;ss.a1M.xn=function(amount,target,...args){const player=o.co,balance=Math.max(0,Math.floor(Number(eF.fa[player])||0)),result=__fxOriginalAttack.call(this,amount,target,...args);__fx.autoOpening.onAttackApplied?.({local:true,neutral:Number(target)===o.bI,attackerId:player,targetId:Number(target),amount:Number(amount),troops:Math.floor(balance*(Number(amount)+1)/1024),tick:(Number.isFinite(__fx.currentGameTick)?__fx.currentGameTick:0)+1});return result};
+            const __fxOriginalAttack=__fxAttackHost[__fxAttackName];__fxAttackHost[__fxAttackName]=function(amount,target,...args){const player=o.co,balance=Math.max(0,Math.floor(Number(eF.fa[player])||0)),result=__fxOriginalAttack.call(this,amount,target,...args);__fx.autoOpening.onAttackApplied?.({local:true,neutral:Number(target)===o.bI,attackerId:player,targetId:Number(target),amount:Number(amount),troops:Math.floor(balance*(Number(amount)+1)/1024),tick:(Number.isFinite(__fx.currentGameTick)?__fx.currentGameTick:0)+1});return result};
 const __fxHasBorderState=player=>Number.isInteger(player)&&player>=0&&player<o.bI&&eF.aOq!=null&&eF.aOq[player]!=null;
 const __fxHasLivePlayer=player=>__fxHasBorderState(player)&&w.cO.iV(player)&&eF.fQ[player]>0;
 const __fxSharesAutoMicroBorder=(player,id)=>{if(!__fxHasBorderState(player)||!__fxHasBorderState(id))return false;const playerBorder=eF.aOq[player],targetBorder=eF.aOq[id],scanTarget=targetBorder.length<playerBorder.length,border=scanTarget?targetBorder:playerBorder,owner=scanTarget?player:id,offsets=ee.iH;for(let index=0;index<border.length;index++)for(let side=3;side>=0;side--){const pixel=border[index]+offsets[side];if(ee.mR(owner,pixel))return true}return false};
@@ -99,10 +100,10 @@ __fx.autoOpening.messiah={getState:()=>{const player=o.co;return{playerAlive:__f
 const __fxGetAutoSpawnStatus=()=>{const player=o.co,connected=o.kg||f2.aw.a5e(f2.aw.p4),selectableSpawn=Boolean(o.db&&w.cO.iT(0)),ready=connected&&selectableSpawn&&!o.ke&&Number.isInteger(player)&&player>=0&&player<o.bI&&eF.hu[player]!==0;if(!ready)return{ready:false,singleplayer:o.kg,connected:connected,selectableSpawn:selectableSpawn};const selectionStep=Number.isInteger(dY.p5&&dY.p5.ww)?dY.p5.ww:null,selectionMax=Number.isInteger(o.x1)?o.x1:null,currentSpawn=eF.fQ[player]>0?{x:(eF.eG[player]+eF.eH[player])>>1,y:(eF.eJ[player]+eF.eK[player])>>1}:null;return{ready:true,singleplayer:o.kg,connected:connected,selectableSpawn:selectableSpawn,gameMode:o.fW,mapId:p.eR,isOneVsOne:o.fW===8,currentSpawn:currentSpawn,selectionStep:selectionStep,selectionMax:selectionMax,selectionRemaining:selectionStep===null||selectionMax===null?null:Math.max(0,selectionMax-selectionStep)}};__fx.autoSpawn={getStatus:__fxGetAutoSpawnStatus,getState:()=>{const status=__fxGetAutoSpawnStatus();if(!status.ready)return status;const player=o.co,width=p.eP,height=p.eQ,freeLand=new Uint8Array(width*height),ownableLand=new Uint8Array(width*height),spawns=[];for(let y=0;y<height;y++)for(let x=0;x<width;x++){const pixel=ee.mQ(x,y),ownable=ee.lV(pixel);ownableLand[y*width+x]=ownable?1:0;freeLand[y*width+x]=ownable&&(!ee.mU(pixel)||ee.sV(player,pixel))?1:0}for(let id=0;id<o.bI;id++)if(id!==player&&eF.fQ[id]>0)spawns.push({id:id,x:(eF.eG[id]+eF.eH[id])>>1,y:(eF.eJ[id]+eF.eK[id])>>1,land:eF.fQ[id],human:id<o.cF,bot:id>=o.cF});return{...status,width:width,height:height,freeLand:freeLand,ownableLand:ownableLand,spawns:spawns,humanCount:o.cF,playerCount:o.cF,entityCount:o.bI}},spawn:(x,y)=>{const player=o.co,px=Math.round(Number(x)),py=Math.round(Number(y));if(!o.db||o.ke||(!o.kg&&!f2.aw.a5e(f2.aw.p4))||!Number.isInteger(px)||!Number.isInteger(py)||px<0||py<0||px>=p.eP||py>=p.eQ||!w.cO.iT(0)||!w.cO.iV(player))return false;const pixel=ee.mQ(px,py);if(!ee.lV(pixel)||ee.mU(pixel))return false;const cell=eN.ed(px,py);return eN.aCm(cell)?(o.kg||f2.aw.aA7(f2.aw.p4),pH.a2J.aKX(cell),true):false}};
 const __fxDecodedAutoSpawnState=__fx.autoSpawn.getState;__fx.autoSpawn.getState=()=>{const state=__fxDecodedAutoSpawnState();if(!state?.ready)return state;for(const spawn of state.spawns){spawn.human=spawn.id<o.cF;spawn.bot=spawn.id>=o.cF}state.humanCount=o.cF;state.playerCount=o.cF;state.entityCount=o.bI;return state};
 
-            const __fxOriginalTick = bc.b8;
-            bc.b8 = function () {
+            const __fxOriginalTick = n.kK;
+            n.kK = function () {
                 const result = __fxOriginalTick.apply(this, arguments);
-                const tick = bc.ql();
+                const tick = n.kg();
                 __fx.currentGameTick = tick;
                 try {
                     __fx.autoOpening?.onTick?.(tick);
@@ -112,9 +113,9 @@ const __fxDecodedAutoSpawnState=__fx.autoSpawn.getState;__fx.autoSpawn.getState=
                 return result;
             };
 
-            if (jZ.lp && typeof jZ.lp.lq === "function") {
-                const __fxOriginalDecode = jZ.lp.lq;
-                jZ.lp.lq = function (...args) {
+            if (cr.rw && typeof cr.rw.a1j === "function") {
+                const __fxOriginalDecode = cr.rw.a1j;
+                cr.rw.a1j = function (...args) {
                     const result = __fxOriginalDecode.apply(this, args);
                     try {
                         __fx.autoSpawnController?.onDecodedPacket?.(this, args[1]);
