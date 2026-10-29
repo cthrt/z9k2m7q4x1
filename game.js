@@ -1746,7 +1746,8 @@ function s5(s6, s7, s8, s9, sA, sB) {
 	};
 	sA = this;
 	sC.style.position = "absolute", sC.style.top = "0", sC.style.left = "0", sC.style.width = "100%", sC.style.height = "100%", sC.style.backgroundColor = aB.sS, b1.b2() || (sC.style.backdropFilter = "blur(4px)", sC.style.webkitBackdropFilter =
-		"blur(4px)"), sD.style.position = "absolute", sD.style.top = "0", sD.style.left = "0", sD.style.width = "100%", sD.style.display = "flex", sD.style.alignItems = "center", sD.translate = !1;
+			"blur(4px)"),
+		__fx.customLobby.isActive() && (sC.style.display = "none"), sD.style.position = "absolute", sD.style.top = "0", sD.style.left = "0", sD.style.width = "100%", sD.style.display = "flex", sD.style.alignItems = "center", sD.translate = !1;
 	for (var e7 = [sE, sF, sG, sL], aW = 0; aW < e7.length; aW++) e7[aW].style.position = "absolute", e7[aW].style.left = "0", e7[aW].style.width = "100%", bK.en.qs(e7[aW]);
 	sH.style.position = "absolute", sH.style.left = "0", sH.style.width = "100%", sH.style.font = "inherit", sI.style.position = "absolute", sI.style.left = "0", sI.style.width = "100%", sJ.style.position = "absolute", sJ.style.top = "0", sJ.style
 		.left = "0", sJ.style.height = "100%", sJ.style.width = "50%", sJ.style.backgroundColor = aB.sT, sK.innerHTML = "", sK.style.position = "absolute", sK.style.top = "50%", sK.style.left = "50%", sK.style.transform = "translate(-50%, -50%)", sK
@@ -2772,9 +2773,9 @@ function zA() {
 		zB.fill(0), zC.fill(0), zD.fill(0), zE.fill(0), this.k1.fill(0), zF.fill(0), zG.fill(0);
 		var zK = d4.j6;
 		if (9 === d4.mr) this.zL();
-		else if (__fx.customLobby.isActive()) {
-			for (index = d4.botCount - 1; 0 <= index; index--) this.difficulty[index + offset] = __fx.customLobby.gameInfo.difficulty
-		} else if (d4.iC)
+		else if (__fx.customLobby.isActive())
+			for (aW = d4.mM - 1; 0 <= aW; aW--) this.k1[aW + zK] = __fx.customLobby.gameInfo.difficulty;
+		else if (d4.iC)
 			if (3 === d4.data.botDifficultyType)
 				for (aW = d4.mM - 1; 0 <= aW; aW--) {
 					var cy = aW + zK;
@@ -3234,7 +3235,7 @@ function a21() {
 		h.gQ(5, 5)
 	}, this.a26 = function(lP) {
 		lP && (w.a27 = lP), h.i(), w.c()
-	}, __fx.customLobby.setJoinFunction(() => this.a26()), this.a28 = function() {
+	}, __fx.customLobby.setJoinFunction(() => this.a26(1)), this.a28 = function() {
 		h.gQ(0 === bz.f() ? 5 : 0)
 	}, this.a29 = function() {
 		if (1 === bn.buffer.data[130].value) h.gQ(8, h.p7().a1T, new l3(24, {
@@ -5608,18 +5609,12 @@ function a6N() {
 	}), new ei(L(10), function() {
 		return aDw(2, 1), 2
 	})], aB.aDx);
-	s9 = new a1H([new ei(L(128, 0, 0, 1), (__fx.customLobby.setLeaveFunction(function() {
-		h.i();
-		an.aV();
-		cr.bf.aE4(3240);
-		__fx.customLobby.setActive(false);
-		h.gQ(5, 5)
-	}), function() {
-		h.i();
-		an.aV();
-		cr.bf.aE4(3240);
-		h.gQ(5, 5)
-	})), new ei(L(129), function() {
+	s9 = new a1H([new ei(L(128, 0, 0, 1), (__fx.customLobby.setLeaveFunction(() => {
+			h.i(), an.aV(), cr.bf.aE4(3240), __fx.customLobby.setActive(false), h.gQ(5, 5)
+		}),
+		function() {
+			h.i(), an.aV(), cr.bf.aE4(3240), __fx.customLobby.setActive(false), h.gQ(5, 5)
+		})), new ei(L(129), function() {
 		return aE0(1), 2
 	})], aB.aDx), aDq = new s5(s6, s7, aDz, s9, aC4, an.az.b0);
 	for (var aW = 0; aW < 4; aW++) aDr[0][aW] = new a2S("0", s6.ch[aW].button), aDr[1][aW] = new a2S("0", s6.ch[aW].button, 1);
@@ -5755,7 +5750,8 @@ function aFE() {
 	}
 
 	function aFa() {
-		0 === aFQ ? aFc.aFd(3249) : aFW()
+		if (0 !== aFQ) return 1 === aFQ && __fx.customLobby.isActive() ? (aFc.aFd(3249), __fx.customLobby.setActive(!1)) : void aFW();
+		aFc.aFd(3249)
 	}
 
 	function aFi(v, aFh, gC) {
@@ -5774,7 +5770,7 @@ function aFE() {
 			iz = Math.floor(.5 * (aD.aF - iN.gap - aFH - aFK)) + aFH + iN.gap;
 		return iw < u && u < iw + aFJ && iz < v && v < iz + aFK && (this.g6(), d.z(u, v, !1), !0)
 	}, this.g6 = function() {
-		cr.bf.aE4(3260), h.bf.a25()
+		cr.bf.aE4(3260), __fx.customLobby.setActive(false), h.bf.a25()
 	}, this.kK = function() {
 		6 === bz.f() && (n.o > aFA + 12e3 && aFa(), 100 < (aFF += .07 * aFG * (aFF < 16 ? 5 + aFF : 84 < aFF ? 105 - aFF : 17)) ? (aFF = 100, aFG = -1) : aFF < 0 && (aFF = 0, aFG = 1), aFM = "rgba(0," + Math.floor(190 - 1.9 * aFF) + "," + Math
 			.floor(120 - 1.2 * aFF) + "," + (.4 + .004 * aFF) + ")", aFN = "rgba(0," + Math.floor(1.9 * aFF) + "," + Math.floor(1.2 * aFF) + "," + (.8 - .004 * aFF) + ")", n.a5 = !0)
@@ -6618,7 +6614,7 @@ function aJM() {
 
 function bk() {
 	this.gc = function(cW) {
-		if ((gM = an.bG.gM[cW]) < 2) return !1;
+		if ((gM = an.bG.gM[cW]) < 2 && !__fx.customLobby.isActive()) return !1;
 		var gA = an.bf.gB[cW],
 			aJz = 9 === gA.gG ? 333 : 512,
 			gM = Math.min(gM, aJz);
@@ -9956,7 +9952,11 @@ function aJL() {
 	}
 
 	function aVB(k) {
-		aVC(k), h.gQ(4, 5, new ec(L(404), aV8(k), !0))
+		aVC(k), h.gQ(4, 5, new ec(L(404), {
+			"3249": "No servers found",
+			"4705": "Lobby not found",
+			"4730": "Kicked from lobby"
+		} [k] ?? aV8(k), !0))
 	}
 
 	function aV8(k) {
@@ -9976,8 +9976,8 @@ function aJL() {
 		cu.close(), 6 === b ? cr.bf.aE4(k) : an.bl ? (h.i(), an.aV(), cr.bf.close(cr.bf.g9, 3256)) : 8 === b && d4.iM(!0)
 	}
 	this.aRT = [], this.aGb = function(c4, k) {
-		if (1 === c4 && __fx.customLobby.isActive() && 6 !== bz.f() && (console.k("Custom lobby connection k", k), __fx.customLobby.setActive(!1)), this.aRT.push(k), 4321 === k && (data = bn.bf.a36(0), console.log("Reset to: " + data.bC), bn.ih
-				.pT(105, data.bC), bn.ih.pT(106, data.password)), 8 === h.l2 && 0 === c4)
+		if (1 === c4 && __fx.customLobby.isActive() && 6 !== bz.f() && __fx.customLobby.setActive(!1), this.aRT.push(k), 4321 === k && (data = bn.bf.a36(0), console.log("Reset to: " + data.bC), bn.ih.pT(105, data.bC), bn.ih.pT(106, data
+				.password)), 8 === h.l2 && 0 === c4)
 			if (4211 === k) aV4(k);
 			else {
 				if (an.bl && (4495 === k || 4480 === k) && cr.bf.g9 !== c4) return void h.ej();
@@ -11573,7 +11573,7 @@ function aZW() {
 			aZk = [130, 117, 106],
 			aZl = [12, 12, 68],
 			aZm = [270, 210, 1024, 28, 19, 33, 50, 8, 26, 3, 9];
-		this.nL = new Array(l.pb + 1), this.nL[0] = {
+		this.nL = new Array(l.pb + 1), __fx.customLobby.setMapInfo(this.nL), this.nL[0] = {
 			aE: 230,
 			aF: 230,
 			t3: 1e3,
@@ -11702,7 +11702,7 @@ function aZW() {
 		for (var aW = 0; aW < l.pb; aW++) this.nL[aW].name = this.aEK[aW];
 		this.nL[l.pb] = {
 			name: ""
-		}, __fx.customLobby.setMapInfo(this.nL), this.aND = new Uint8Array(12);
+		}, this.aND = new Uint8Array(12);
 		for (aW = 0; aW < 10; aW++) this.aND[aW] = aW;
 		for (this.aND[10] = 20, this.aND[11] = 21, this.aNG = new Uint8Array(l.aZV), aW = 0; aW < 10; aW++) this.aNG[aW] = 10 + aW;
 		this.aNG[10] = 22, this.aNG[11] = 23, this.aNG[12] = 24
@@ -11718,7 +11718,7 @@ function aIj() {
 
 function rx() {
 	this.a1j = function(c4, eG) {
-		gD.c(eG), 0 === gD.size ? cr.bf.aBV(c4, 3205) : ((0 === gD.gE(1) ? function(c4) {
+		gD.c(eG), 0 === gD.size ? cr.bf.aBV(c4, 3205) : __fx.customLobby.isCustomMessage(eG) || ((0 === gD.gE(1) ? function(c4) {
 			var aZx = gD.gE(6);
 			0 === aZx ? function(c4) {
 					if (0 === c4 && 8 !== bz.f()) {
@@ -12330,15 +12330,17 @@ function aIm() {
 					8
 				][this.data.battleRoyaleMode] : this.data.isZombieMode ? 9 : this.data.numberTeams - 2, this.wB = this.data.isContest, this.jD = this.mr < 7 || 9 === this.mr, this.mr = 10 === this.mr && this.iC ? 7 : this.mr, this.mr = 8 === this
 				.mr && 2 !== this.j6 ? 7 : this.mr, rU.c(), this.rD = this.data.numberTeams, this.data.teamPlayerCount ? this.aAn = +(0 < this.data.teamPlayerCount[0]) : (this.aAn = 0, this.jD && this.iC && (this.data.teamPlayerCount =
-					new Uint16Array(9), this.data.teamPlayerCount.fill(1, 1, this.rD + 1), d4.pD.aNa())), this.n5 = this.j6 <= 2 ? 30 : this.j6 <= 50 ? 40 : 50, this.aWI = this.iA = this.data.selectableSpawn, this.a9N = this.iA ? new a9G : null,
-				1 === lT.uc ? this.aAi = this.j6 : this.aAi = this.data.playerCount, this.aAl = this.aAi, this.mM = this.aAi - this.j6, this.mN = 0, this.jL = this.data.selectedPlayer, this.vR = 0, this.vj = 0, this.aKC = 0, this.aBQ = 0, kH.a0b(this
-					.data.spawningSeed), k5.c(), dA.c(), aIT.c(), aIS.aP0(), ko.a2N.aa7 = [], ko.zg.aJT = 1, __fx.donationsTracker.reset(), __fx.leaderboardFilter.reset(), __fx.customLobby.isActive() && __fx.customLobby.hideWindow(), jE.c(), this
-				.fL = 1, ob.c(), aVw(), dK.o3(), aDi.pu(), iF.c(), dK.c(), aIU.c(), dI.c(), d5.c(), kN.c(), aId.pO(), k8.c(), aIS.eH(), a9H.c(), aIP.c(), mK.x9(), uY.c(), kk.c(), ip.c(), fO.c(), xU.putImageData(xV, 0, 0), fX.c(), fY.c(), fZ.c(), fM
-				.c(), fU.c(), mS.c(), mY.c(), fT.c(), oC.c(), eX.c(), fS.c(), fQ.c(), fP.c(), a6l.c(), aA4.c(), aFv(), k2.c(), oD.c(), aIX.c(), aIY.c(), zo.c(), aIa.c(), aIb.c(), this.aKD.c(), n.pO(), a0X.abw(), 0 === dA.iR[d4.jL] && fP.show(!1, !0),
-				oD.iE(!0), a9L.c(), n.a5 = !0, this.g2 || this.iC && this.iA || bx.by.setState(1), this.pC = 0
+					new Uint16Array(9), this.data.teamPlayerCount.fill(1, 1, this.rD + 1), d4.pD.aNa())), this.n5 = this.j6 <= 2 ? 30 : this.j6 <= 50 ? 40 : 50, this.aWI = this.iA = __fx.customLobby.isActive() ? __fx.customLobby.gameInfo
+				.spawnSelection : this.data.selectableSpawn, this.a9N = this.iA ? new a9G : null, this.aAi = __fx.customLobby.isActive() ? Math.max(Math.min(__fx.customLobby.gameInfo.botCount, this.data.playerCount), this.j6) : 1 === lT.uc ? this
+				.aAi = this.j6 : this.aAi = this.data.playerCount,
+				this.aAl = this.aAi, this.mM = this.aAi - this.j6, this.mN = 0, this.jL = this.data.selectedPlayer, this.vR = 0, this.vj = 0, this.aKC = 0, this.aBQ = 0, kH.a0b(this.data.spawningSeed), k5.c(), dA.c(), aIT.c(), aIS.aP0(), ko.a2N
+				.aa7 = [], ko.zg.aJT = 1, __fx.donationsTracker.reset(), __fx.leaderboardFilter.reset(), __fx.customLobby.isActive() && __fx.customLobby.hideWindow(), jE.c(), this.fL = 1, ob.c(), aVw(), dK.o3(), aDi.pu(), iF.c(), dK.c(), aIU.c(), dI
+				.c(), d5.c(), kN.c(), aId.pO(), k8.c(), aIS.eH(), a9H.c(), aIP.c(), mK.x9(), uY.c(), kk.c(), ip.c(), fO.c(), xU.putImageData(xV, 0, 0), fX.c(), fY.c(), fZ.c(), fM.c(), fU.c(), mS.c(), mY.c(), fT.c(), oC.c(), eX.c(), fS.c(), fQ.c(), fP
+				.c(), a6l.c(), aA4.c(), aFv(), k2.c(), oD.c(), aIX.c(), aIY.c(), zo.c(), aIa.c(), aIb.c(), this.aKD.c(), n.pO(), a0X.abw(), 0 === dA.iR[d4.jL] && fP.show(!1, !0), oD.iE(!0), a9L.c(), n.a5 = !0, this.g2 || this.iC && this.iA || bx.by
+				.setState(1), this.pC = 0
 		}, this.iM = function(aU5) {
-			uY.p0.aUJ.length ? this.aUI = uY.p0.aUJ : this.aUI = uY.p2.iX(), __fx.replayHistory.save(this.aUI), cr.bf.aGa(), oX.clear(), this.fL = 0, n.qS(), bx.by.setState(0), bz.setState(0), c0.aF4.show(aU5), 2 === this.pC ? h.bf.a26(0) : 1 ===
-				this.pC ? h.gQ(19) : h.gQ(5, 5)
+			uY.p0.aUJ.length ? this.aUI = uY.p0.aUJ : this.aUI = uY.p2.iX(), __fx.replayHistory.save(this.aUI), !1 === __fx.customLobby.isActive() && cr.bf.aGa(), oX.clear(), this.fL = 0, n.qS(), bx.by.setState(0), bz.setState(0), __fx.customLobby
+				.isActive() || c0.aF4.show(aU5), __fx.customLobby.isActive() ? __fx.customLobby.rejoinLobby() : 2 === this.pC ? h.bf.a26(0) : 1 === this.pC ? h.gQ(19) : h.gQ(5, 5)
 		}, this.a41 = function() {
 			return this.g2 ? fT.g0 || !fM.iB : this.iC && (fT.g0 || this.iA)
 		}, this.a4e = function() {
