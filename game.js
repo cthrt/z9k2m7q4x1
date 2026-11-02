@@ -1085,7 +1085,7 @@ function m3() {
 				if (aI.jV && (4495 === b7 || 4480 === b7) && aF.b1.bu !== bb) return void aq.ar();
 				if (8 !== jE.jF() && m7(), 4480 === b7) return b6.bJ.mO(), void aq.fu(4, 0, new mC(L(15), L(16), !0));
 				var data = 0;
-				aq.mA() && 10 === aq.mA().mB && (data = aq.mA().mB), aq.fu(4, data, new mC(L(13), mD(b7), !0))
+				aq.mA() && 10 === aq.mA().mB && (data = aq.mA().mB), 4555 === b7 && __fx.blockedAccount && __fx.blockedAccount(), aq.fu(4, data, new mC(L(13), mD(b7), !0))
 			}
 		else {
 			data = jE.jF();
