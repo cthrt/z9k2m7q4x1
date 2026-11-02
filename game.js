@@ -8766,7 +8766,7 @@ function aNT() {
 		} : function(bb) {
 			if (8 !== jE.jF() && !hO.aQB()) return;
 			if (bb !== aF.b1.c7) aF.b1.a2K(bb, 3244);
-			else if (0 === ft.bg(1)) dy.aEP.gB(ft.bk);
+			else if (0 === ft.bg(1)) dy.aEP.gB && dy.aEP.gB(ft.bk);
 			else {
 				var aN, bb = ft.bg(2);
 				if (0 === bb) {
