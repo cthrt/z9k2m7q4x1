@@ -10,7 +10,7 @@
         if (typeof aS === "undefined" || !aS) missing.push("aS");
         if (typeof ad === "undefined" || !ad) missing.push("ad");
         if (typeof bP === "undefined" || !bP) missing.push("bP");
-        if (typeof b1 === "undefined" || !b1 || !b1.z || !b1.a8o) missing.push("b1.z/b1.a8o");
+        if (typeof b1 === "undefined" || !b1 || !b1.z || !b1.a9h) missing.push("b1.z/b1.a9h");
         if (typeof bi === "undefined" || !bi || typeof bi.ee !== "function") missing.push("bi.ee");
         if (typeof aF === "undefined" || !aF) missing.push("aF");
         if (typeof bg === "undefined" || !bg) missing.push("bg");
@@ -113,9 +113,9 @@ const __fxDecodedAutoSpawnState=__fx.autoSpawn.getState;__fx.autoSpawn.getState=
                 return result;
             };
 
-            if (b1.a8o && typeof b1.a8o.aW9 === "function") {
-                const __fxOriginalDecode = b1.a8o.aW9;
-                b1.a8o.aW9 = function (...args) {
+            if (b1.a9h && typeof b1.a9h.aX3 === "function") {
+                const __fxOriginalDecode = b1.a9h.aX3;
+                b1.a9h.aX3 = function (...args) {
                     const result = __fxOriginalDecode.apply(this, args);
                     try {
                         __fx.autoSpawnController?.onDecodedPacket?.(this, args[1]);
