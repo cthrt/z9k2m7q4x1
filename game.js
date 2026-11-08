@@ -10782,11 +10782,14 @@ function aWK() {
 		return "<a href='https://" + aWn + "' target='_blank'>" + aWn + "</a>"
 	}, this.aJc = function(oN, a4M, aWl) {
 		aWl = this.aWk(aWl);
-		if (aWd[oN] && aWd[oN].aWD) {
-			if (aWc[oN].aWq()) return aWc[oN].aWr(a4M), aWc[oN].ef();
-			aWc[oN].tX()
+		if (0 <= oN && oN < this.aJb) {
+			if (aWd[oN] && aWd[oN].aWD) {
+				if (aWc[oN].aWq()) return aWc[oN].aWr(a4M), aWc[oN].ef();
+				aWc[oN].tX()
+			}
+			aWp(oN, a4M, aWl)
 		}
-		return aWp(oN, a4M, aWl), !1
+		return !1
 	}, this.aWt = function(oN, a4M) {
 		console.log("Connection to Server " + oN), b1.eg.aWu(oN)
 	}, this.aWj = function(aC) {
