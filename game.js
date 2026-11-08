@@ -10744,11 +10744,15 @@ function aWK() {
 	}
 
 	function aWp(oN, a4M, aWo) {
-		aWd[oN].aWD = !0, aWi(oN), aWc[oN] = new aWs, aWc[oN].dk(oN, a4M, aWo)
+		aWd[oN] || (aWd[oN] = {
+			aWD: !1,
+			eZ: 0,
+			aWf: !1
+		}), aWd[oN].aWD = !0, aWi(oN), aWc[oN] = new aWs, aWc[oN].dk(oN, a4M, aWo)
 	}
 
 	function aWq(aC) {
-		return aWd[aC].aWD && aWc[aC].aWq()
+		return aWd[aC] && aWd[aC].aWD && aWc[aC] && aWc[aC].aWq()
 	}
 
 	function aWi(oN) {
@@ -10766,7 +10770,7 @@ function aWK() {
 		return aWc[aC]
 	}, this.ee = function() {
 		for (var aC = this.aJb - 1; 0 <= aC; aC--) this.ef(aC) && bi.eZ > aWd[aC].eZ + 15e3 && (b1.qo.aWh(aC, aWd[aC].aWf), aWi(aC));
-		!this.ef(0) && bi.eZ > aWd[0].eZ + 8e3 && (aWd[0].eZ = bi.eZ, this.aJc(0, 0, 0))
+		!this.ef(0) && aWd[0] && bi.eZ > aWd[0].eZ + 8e3 && (aWd[0].eZ = bi.eZ, this.aJc(0, 0, 0))
 	}, this.aU7 = function(id) {
 		return this.aJc(0, id, 0) && this.aWj(0)
 	}, this.aWk = function(aWl) {
@@ -10778,7 +10782,7 @@ function aWK() {
 		return "<a href='https://" + aWn + "' target='_blank'>" + aWn + "</a>"
 	}, this.aJc = function(oN, a4M, aWl) {
 		aWl = this.aWk(aWl);
-		if (aWd[oN].aWD) {
+		if (aWd[oN] && aWd[oN].aWD) {
 			if (aWc[oN].aWq()) return aWc[oN].aWr(a4M), aWc[oN].ef();
 			aWc[oN].tX()
 		}
@@ -10786,15 +10790,15 @@ function aWK() {
 	}, this.aWt = function(oN, a4M) {
 		console.log("Connection to Server " + oN), b1.eg.aWu(oN)
 	}, this.aWj = function(aC) {
-		return this.ef(aC) && aWc[aC].aWj()
+		return !(!this.ef(aC) || !aWc[aC]) && aWc[aC].aWj()
 	}, this.aWv = function(aC) {
-		aWc[aC].aWv()
+		aWc[aC] && aWc[aC].aWv()
 	}, this.ef = function(aC) {
-		return aWd[aC].aWD && aWc[aC].ef()
+		return !!(aWd[aC] && aWd[aC].aWD && aWc[aC]) && aWc[aC].ef()
 	}, this.send = function(oN, aD) {
 		0 !== oN && aWi(oN), aWc[oN].send(aD)
 	}, __fx.customLobby.setSendFunction(this.send), this.a4v = function(oN) {
-		8 === ab.a4H() && (aWd[oN].aWf = !0, b1.nC.aWw = !0)
+		aWd[oN] && 8 === ab.a4H() && (aWd[oN].aWf = !0, b1.nC.aWw = !0)
 	}, this.close = function(oN, aWx) {
 		aWq(oN) && aWc[oN].close(aWx)
 	}, this.aWy = function(oN, aWx) {
