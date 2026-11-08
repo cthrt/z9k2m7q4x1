@@ -1790,7 +1790,8 @@ function v1(v2, v3, t2, t3, v4) {
 		.translate = !1, v6.appendChild(function() {
 			var vL = document.createElement("h1");
 			return vL.textContent = L(24), vL.style.margin = "0 auto 0.15em auto", vL.style.fontFamily = "Arial Black, system-ui", vL.style.fontSize = "inherit", vL.style.fontWeight = "inherit", vL
-		}()), v7.appendChild(v2.s1), v9.appendChild(vA), v9.appendChild(vB), vC.appendChild(v3.s1), v5.appendChild(v6), v5.appendChild(v7), v5.appendChild(v8), v5.appendChild(v9), v5.appendChild(vC), t2.vG.show(v8)
+		}()), v7.appendChild(v2.s1), v9.appendChild(vA), v9.appendChild(vB), vC.appendChild(v3.s1), v5.appendChild(v6), v5.appendChild(v7), v5.appendChild(v8), v5.appendChild(v9), v5.appendChild(vC), v5.className = "fx-lobby", v8.className =
+		"fx-panel", v9.className = "fx-progress", t2.vG.show(v8)
 }
 
 function vH(v4) {
@@ -1894,7 +1895,7 @@ function vH(v4) {
 				sE = vY[aC],
 				hj = wE.id === bq.sH.wF ? 1 : 0;
 			wA(sE.map, bV.wG.wH[wE.fF]), wA(sE.vz, bq.sH.wI(wE.vz)), wA(sE.w0, bq.sH.wJ(wE.wK)), wA(sE.w1, "" + wE.h2), wA(sE.w2, 1 === wE.h2 ? L(26) : L(27)), sE.hj !== hj && (sE.hj = hj, sE.vc.style.backgroundColor = sE.ve.style
-				.backgroundColor = hj ? bE.pu : bE.pH, bD.sM.sW(sE.button, 5, hj ? bE.pv : bE.pO)), ! function(sE) {
+				.backgroundColor = hj ? bE.pu : bE.pH, bD.sM.sW(sE.button, 5, hj ? bE.pv : bE.pO), sE.button.classList.toggle("fx-line", !hj)), ! function(sE) {
 				!sE.vt && ac.uz() && (sE.vt = 1, sE.vq.drawImage(ac.w8("clock"), 0, 0), sE.vs.drawImage(ac.w8("userIcon"), 0, 0))
 			}(sE), ! function(sE, vz) {
 				sE.vw === vz || 7 <= vz && !ac.uz() || ((sE.vw = vz) < 7 ? bk.wR(sE.vv, vz + 2, vZ) : (sE.vv.clearRect(0, 0, vZ, vZ), sE.vv.drawImage(ac.w8(va[vz - 7]), 0, 0, vZ, vZ)))
@@ -1954,7 +1955,7 @@ function vF(t3) {
 					bq.wX.wk(e.target, sE, 1)
 				}), tP.appendChild(tJ)
 			}(tP, w1[aC], aC < wa, wb);
-			v8.appendChild(tP)
+			v8.appendChild(tP), v8.classList.toggle("fx-wide", !!wb)
 		}, this.show = function(sG) {
 			sG.appendChild(v5)
 		}, this.tX = function(sG) {
@@ -1962,7 +1963,7 @@ function vF(t3) {
 		}, this.resize = function() {
 			v8.style.fontSize = bD.sM.sV(bD.sM.tZ(.02, .3))
 		}, v5.style.top = "0", v5.style.left = "0", v5.style.width = v5.style.height = "100%", v5.style.overflowX = "hidden", v5.style.overflowY = "auto", v5.style.font = "inherit", v8.style.font = "inherit", v8.style.margin = "0.4em", v5
-		.appendChild(v8)
+		.appendChild(v8), v5.className = "fx-players-scroll", v8.className = "fx-players"
 }
 
 function wl(wm) {
@@ -2134,7 +2135,7 @@ function xW(title, xX, xY) {
 		uK = document.createElement("div"),
 		xa = document.createElement("div"),
 		xb = document.createElement("div");
-	this.xc = uK, this.xd = xX, this.show = function() {
+	this.xc = uK, this.xd = xX, uh.className = "fx-page", this.show = function() {
 			!1 !== xY ? document.body.appendChild(uh) : (document.body.appendChild(xZ), document.body.appendChild(xa))
 		}, this.tX = function() {
 			!1 !== xY ? u.removeChild(document.body, uh) : (u.removeChild(document.body, xZ), u.removeChild(document.body, xa))
@@ -3587,6 +3588,7 @@ function a5K() {
 	}, this.textBaseline = function(ib, id) {
 		ib.textBaseline = 1 === id ? "middle" : 2 === id ? "bottom" : "top"
 	}, this.sW = function(e, code, color) {
+		e.classList.toggle("fx-line", !color), e.classList.toggle("fx-box", !code || 5 === code);
 		color = this.sV(bf.u9) + " solid " + (color || bE.pO);
 		5 === (code = code || 5) ? e.style.border = color : 4 === code ? e.style.borderLeft = color : 2 === code ? e.style.borderBottom = color : 6 === code ? e.style.borderRight = color : e.style.borderTop = color
 	}, this.ux = function(e, fg, fi, j, k) {
@@ -4111,9 +4113,9 @@ function cH() {
 		var a8t, ou = canvas.getContext("2d", {
 			alpha: !0
 		});
-		ou.clearRect(0, 0, k, k), ou.fillStyle = bE.pK, ou.fillRect(0, 0, k, k), 9 === a8p && (ou.fillStyle = bE.pP, ou.fillRect(0, 0, k, k)), ou.fillStyle = bE.pO, ou.fillRect(0, 0, k, 1), ou.fillRect(0, 0, 1, k), ou.fillRect(0, k - 1, k, 1), ou
-			.fillRect(k - 1, 0, 1, k), a8t = .9 * k / ac.get(0).width, ou.imageSmoothingEnabled = !0, ou.setTransform(a8t, 0, 0, a8t, Math.floor((k - a8t * ac.get(0).width) / 2), Math.floor((k - a8t * ac.get(0).height) / 2)), ou.drawImage(ac.get(0),
-				0, 0), ou.setTransform(1, 0, 0, 1, 0, 0)
+		ou.clearRect(0, 0, k, k), ou.fillStyle = bE.pK, ou.fillRect(0, 0, k, k), 9 === a8p && (ou.fillStyle = bE.pP, ou.fillRect(0, 0, k, k)), ou.fillStyle = bE.pO, __fx.utils.smoothFrame(ou, k, k) || (ou.fillRect(0, 0, k, 1), ou.fillRect(0, 0, 1,
+			k), ou.fillRect(0, k - 1, k, 1), ou.fillRect(k - 1, 0, 1, k)), a8t = .9 * k / ac.get(0).width, ou.imageSmoothingEnabled = !0, ou.setTransform(a8t, 0, 0, a8t, Math.floor((k - a8t * ac.get(0).width) / 2), Math.floor((k - a8t * ac.get(0)
+			.height) / 2)), ou.drawImage(ac.get(0), 0, 0), ou.setTransform(1, 0, 0, 1, 0, 0)
 	}
 
 	function a8w(m9, mA) {
@@ -4172,8 +4174,8 @@ function cI() {
 		if (bi.ds = !0, a9V || bt.a1b(s3, a9K), j + 2 * a93 + aS.k > i.j && !a9W && 50 !== id && 20 < s3.length) a9E(ea, (a9V = bD.tK.a7G(s3))[0], id, h7, a9H, a9I, lX, a9J, a9K, a9L, !0), a9E(ea, a9V[1], id, h7, a9H, a9I, lX, a9J, a9K, a9L, !0);
 		else if (a9V = j + (50 === id ? a95 : 0), (a5x = document.createElement("canvas")).width = j, a5x.height = k, (ou = a5x.getContext("2d", {
 				alpha: !0
-			})).font = aO.a8o, bD.sM.textBaseline(ou, 1), bD.sM.textAlign(ou, 0), ou.clearRect(0, 0, j, k), ou.fillStyle = a9I, ou.fillRect(0, 0, j, k), ou.fillStyle = a9H, ou.fillText(s3, Math.floor(1.5 * a94), Math.floor(k / 2)), a9W && (ou
-				.imageSmoothingEnabled = !0, ak.zj.a28(a9K, ou, j - k, 0, k)), 0 === (sE = {
+			})).font = aO.a8o, bD.sM.textBaseline(ou, 1), bD.sM.textAlign(ou, 0), ou.clearRect(0, 0, j, k), ou.fillStyle = a9I, ou.fillRect(0, 0, j, k), __fx.utils.smoothFrame(ou, j, k, 0), ou.fillStyle = a9H, ou.fillText(s3, Math.floor(1.5 * a94),
+				Math.floor(k / 2)), a9W && (ou.imageSmoothingEnabled = !0, ak.zj.a28(a9K, ou, j - k, 0, k)), 0 === (sE = {
 				eZ: ea,
 				s3: s3,
 				id: id,
@@ -4550,6 +4552,7 @@ function cL() {
 	}
 
 	function aB7() {
+		if (__fx.settings.smoothUI && ou.roundRect) return ou.beginPath(), ou.roundRect(0, 0, a92[0].width, k, .15 * k);
 		ou.beginPath(), ou.moveTo(aAw, 0), ou.lineTo(a92[0].width - aAw, 0), ou.lineTo(a92[0].width, aAw), ou.lineTo(a92[0].width, k - aAw), ou.lineTo(a92[0].width - aAw, k), ou.lineTo(aAw, k), ou.lineTo(0, k - aAw), ou.lineTo(0, aAw), ou.closePath()
 	}
 	this.dk = function() {
@@ -4674,12 +4677,13 @@ function cM() {
 		var aAU = Math.floor(jC * (j - 2 * aBS)),
 			aBY = 1 + Math.floor(.0625 * aS.k),
 			aBZ = 1 + Math.floor(.3 * aS.k),
-			aBa = Math.floor(.55 * aS.k);
-		ou.clearRect(0, 0, j, aS.k), ou.fillStyle = bE.pK, ou.fillRect(0, 0, aBS, aS.k), ou.fillRect(aBS + aAU, 0, j - aBS - aAU, aS.k), ou.fillStyle = jC < 1 / 3 ? "rgba(" + Math.floor(3 * jC * 130) + ",130,0,0.85)" : jC < 2 / 3 ? "rgba(130," + (
-				130 - Math.floor(3 * (jC - 1 / 3) * 130)) + ",0,0.85)" : "rgba(130,0," + Math.floor(3 * (jC - 2 / 3) * 130) + ",0.85)", ou.fillRect(aBS, 0, aAU, aS.k), ou.fillStyle = bE.pO, ou.fillRect(0, 0, j, 1), ou.fillRect(0, aS.k - 1, j, 1), ou
-			.fillRect(0, 0, 1, aS.k), ou.fillRect(aBS, 0, 1, aS.k), ou.fillRect(aBS + aAU, 0, 1, aS.k), ou.fillRect(j - aBS, 0, 1, aS.k), ou.fillRect(j - 1, 0, 1, aS.k), ou.fillRect(Math.floor(.25 * aS.k) + aBZ, Math.floor((aS.k - aBY) / 2), aS.k -
-				2 * aBZ, aBY), ou.fillRect(Math.floor(j - 1.25 * aS.k) + aBZ, Math.floor((aS.k - aBY) / 2), aS.k - 2 * aBZ - aBZ % 2, aBY), ou.fillRect(Math.floor(j - 1.25 * aS.k) + Math.floor((aS.k - aBY) / 2), aBZ, aBY, aS.k - 2 * aBZ - aBZ % 2),
-			a7J = bD.gv.jB(aE.fJ, aS.i3()), ou.fillText(bD.tK.a2Q(a7J) + " (" + bD.tK.a7C(100 * jC, +(jC < .1)) + ")", Math.floor(.5 * j), aBa)
+			aBa = Math.floor(.55 * aS.k),
+			rounded = (ou.clearRect(0, 0, j, aS.k), ou.fillStyle = bE.pK, ou.fillRect(0, 0, aBS, aS.k), ou.fillRect(aBS + aAU, 0, j - aBS - aAU, aS.k), ou.fillStyle = jC < 1 / 3 ? "rgba(" + Math.floor(3 * jC * 130) + ",130,0,0.85)" : jC < 2 / 3 ?
+				"rgba(130," + (130 - Math.floor(3 * (jC - 1 / 3) * 130)) + ",0,0.85)" : "rgba(130,0," + Math.floor(3 * (jC - 2 / 3) * 130) + ",0.85)", ou.fillRect(aBS, 0, aAU, aS.k), ou.fillStyle = bE.pO, ou.fillStyle = __fx.utils.lineColor(bE.pO),
+				__fx.utils.smoothFrame(ou, j, aS.k));
+		rounded || (ou.fillRect(0, 0, j, 1), ou.fillRect(0, aS.k - 1, j, 1), ou.fillRect(0, 0, 1, aS.k)), ou.fillRect(aBS, 0, 1, aS.k), ou.fillRect(aBS + aAU, 0, 1, aS.k), ou.fillRect(j - aBS, 0, 1, aS.k), rounded || ou.fillRect(j - 1, 0, 1, aS.k),
+			ou.fillStyle = bE.pO, ou.fillRect(Math.floor(.25 * aS.k) + aBZ, Math.floor((aS.k - aBY) / 2), aS.k - 2 * aBZ, aBY), ou.fillRect(Math.floor(j - 1.25 * aS.k) + aBZ, Math.floor((aS.k - aBY) / 2), aS.k - 2 * aBZ - aBZ % 2, aBY), ou.fillRect(
+				Math.floor(j - 1.25 * aS.k) + Math.floor((aS.k - aBY) / 2), aBZ, aBY, aS.k - 2 * aBZ - aBZ % 2), a7J = bD.gv.jB(aE.fJ, aS.i3()), ou.fillText(bD.tK.a2Q(a7J) + " (" + bD.tK.a7C(100 * jC, +(jC < .1)) + ")", Math.floor(.5 * j), aBa)
 	}
 	this.setAbsolutePercentage = function(newPercentage) {
 		jC = newPercentage;
@@ -4860,7 +4864,8 @@ function cN() {
 		this.aBU(),
 			function() {
 				for (var aCL = Math.floor(1 + j / 20), aC = 1; 0 <= aC; aC--) aC2[aC].clearRect(0, 0, j, j), aC2[aC].fillStyle = bE.pH, aC2[aC].beginPath(), aC2[aC].arc(j / 2, j / 2, j / 2 - aCL, 0, 2 * Math.PI), aC2[aC].fill(), aC2[aC]
-					.lineWidth = aCL, aC2[aC].fillStyle = bE.pO, aC2[aC].strokeStyle = bE.pO, aC2[aC].beginPath(), aC2[aC].arc(j / 2, j / 2, j / 2 - aCL, 0, 2 * Math.PI), aC2[aC].stroke(), a1L(aC2[aC], 0, 0, j, aCL, .3, 0 === aC)
+					.lineWidth = aCL, aC2[aC].fillStyle = bE.pO, aC2[aC].strokeStyle = bE.pO, aC2[aC].strokeStyle = __fx.utils.lineColor(bE.pO), aC2[aC].beginPath(), aC2[aC].arc(j / 2, j / 2, j / 2 - aCL, 0, 2 * Math.PI), aC2[aC].stroke(), a1L(
+						aC2[aC], 0, 0, j, aCL, .3, 0 === aC)
 			}()
 	}, this.a1E = function() {
 		return -jD / im
@@ -5001,8 +5006,8 @@ function cP() {
 			aD9 = Math.floor(this.k / 12),
 			aD5 = .5 * (j + aD5) + aD9;
 		(aD5 + uf + aCu <= j || 1e3 <= aD6 && (aD8 = "+" + Math.floor(aD6 / 1e3) + "K", aD5 + (uf = ou.measureText(aD8).width) + aCu <= j)) && ou.fillText(aD8, Math.floor(aD5 + .5 * uf), Math.floor(.3 * this.k)), __fx.settings
-			.displayTickNumber && ou.fillText(9 - ej, Math.floor(2 * aCu + aD9), Math.floor(.3 * this.k)), ou.fillStyle = bE.pO, ou.fillRect(0, 0, j, 1), ou.fillRect(0, 0, 1, this.k), ou.fillRect(0, this.k - 1, j, 1), ou.fillRect(j - 1, 0, 1,
-				this.k)
+			.displayTickNumber && ou.fillText(9 - ej, Math.floor(2 * aCu + aD9), Math.floor(.3 * this.k)), ou.fillStyle = bE.pO, __fx.utils.smoothFrame(ou, j, this.k) || (ou.fillRect(0, 0, j, 1), ou.fillRect(0, 0, 1, this.k), ou.fillRect(0, this
+				.k - 1, j, 1), ou.fillRect(j - 1, 0, 1, this.k))
 	}, this.aD3 = function() {
 		var ej = bi.kr() % 100,
 			a0H = (ej = 9 - bO.g0(ej -= ej % 10, 10), Math.floor(ej * (this.k - aCu) / 9));
@@ -5069,14 +5074,16 @@ function cQ() {
 			//console.log("drawing", aDV),
 			aDG.clearRect(0, aB5 - __fx.leaderboardFilter.tabBarOffset, aDA, __fx.leaderboardFilter.tabBarOffset);
 		aDG.fillRect(0, aB5 - __fx.leaderboardFilter.tabBarOffset, aDA, __fx.leaderboardFilter.tabBarOffset);
-		aDG.fillStyle = bE.pO,
+		aDG.fillStyle = __fx.utils.lineColor(bE.pO),
 			aDG.fillRect(0, aDL, aDA, 1),
 			aDG.fillRect(0, aB5 - __fx.leaderboardFilter.tabBarOffset, aDA, 1),
 			__fx.leaderboardFilter.drawTabs(aDG, aDA, aB5 - __fx.leaderboardFilter.tabBarOffset, bE.pn),
-			aDG.fillRect(0, 0, aDA, bf.a27),
-			aDG.fillRect(0, 0, bf.a27, aB5),
-			aDG.fillRect(aDA - bf.a27, 0, bf.a27, aB5),
-			aDG.fillRect(0, aB5 - bf.a27, aDA, bf.a27), aDG.font = aDB, bD.sM.textBaseline(aDG, 1), bD.sM.textAlign(aDG, 1), aDG.fillText(aDd, Math.floor((aDA + aDL - 22) / 2), Math.floor(aDJ + aDC / 2));
+			__fx.utils.smoothFrame(aDG, aDA, aB5, bf.a27) || (
+				aDG.fillRect(0, 0, aDA, bf.a27),
+				aDG.fillRect(0, 0, bf.a27, aB5),
+				aDG.fillRect(aDA - bf.a27, 0, bf.a27, aB5),
+				aDG.fillRect(0, aB5 - bf.a27, aDA, bf.a27)),
+			aDG.fillStyle = bE.pO, aDG.font = aDB, bD.sM.textBaseline(aDG, 1), bD.sM.textAlign(aDG, 1), aDG.fillText(aDd, Math.floor((aDA + aDL - 22) / 2), Math.floor(aDJ + aDC / 2));
 		__fx.playerList.drawButton(aDG, 12, 12, aDL - 22);
 		var fs, h8 = playerPos < position + aDE - 1 ? 1 : 2;
 		if (__fx.leaderboardFilter.showingRivals) h8 = 1;
@@ -5255,8 +5262,9 @@ function cR() {
 	var canvas, ou, fg, fi, aCm, aE4, gap, aE5, fontSize, aE6, aE7, aE8, aE9, aEA, aEB, aEC, aED, aEE;
 
 	function aEI() {
-		ou.clearRect(0, 0, aX.j, aX.k), ou.fillStyle = bE.pL, ou.fillRect(0, 0, aX.j, aX.k), ou.fillStyle = bE.pi, fD = 0 < aEC ? aEC : aE9[4] / 1e4, ou.fillRect(0, aX.k - aCm - 1, Math.floor(fD * aX.j), aCm), ou.fillStyle = bE.pO, ou.fillRect(0, 0,
-			aX.j, 1), ou.fillRect(0, 0, 1, aX.k), ou.fillRect(aX.j - 1, 0, 1, aX.k), ou.fillRect(0, aX.k - 1, aX.j, 1), ou.fillRect(0, aX.k - aCm - 1, aX.j, 1);
+		ou.clearRect(0, 0, aX.j, aX.k), ou.fillStyle = bE.pL, ou.fillRect(0, 0, aX.j, aX.k), ou.fillStyle = bE.pi, fD = 0 < aEC ? aEC : aE9[4] / 1e4, ou.fillRect(0, aX.k - aCm - 1, Math.floor(fD * aX.j), aCm), ou.fillStyle = bE.pO, ou.fillStyle =
+			__fx.utils.lineColor(bE.pO), __fx.utils.smoothFrame(ou, aX.j, aX.k) || (ou.fillRect(0, 0, aX.j, 1), ou.fillRect(0, 0, 1, aX.k), ou.fillRect(aX.j - 1, 0, 1, aX.k), ou.fillRect(0, aX.k - 1, aX.j, 1)), ou.fillRect(0, aX.k - aCm - 1, aX.j,
+			1), ou.fillStyle = bE.pO;
 		for (var fD, aEK, ea = 0, aC = 0; aC < aE8.length; aC++) aEA[aC] ? (bD.sM.textAlign(ou, 0), aEK = Math.floor((aE4 - aCm + 2 * aE5) * (aC - ea + 1) / (aE8.length + 1) - .7 * aE5), ou.fillText(aE8[aC], gap, aEK), bD.sM.textAlign(ou, 2), 5 ===
 			aC && 0 !== ah.nU[aE.fJ] && ah.hb[aE.fJ] >= af.ka(aE.fJ) ? (ou.fillStyle = bE.qM, ou.fillText(aEG(aC), aX.j - gap, aEK), ou.fillStyle = bE.pO) : ou.fillText(aEG(aC), aX.j - gap, aEK)) : ea++
 	}
@@ -6505,13 +6513,15 @@ function cU() {
 		var fg = Math.floor((i.j - aJM) / 2),
 			fi = Math.floor(.5 * (i.k - bf.gap - aAI - aJN));
 		! function(title, fi, aCO, vN) {
-			xm.fillStyle = aJQ, aJj(fi, aCO, 1), xm.fill(), xm.fillStyle = aJP, aJj(fi, aCO, vN), xm.fill(), xm.strokeStyle = bE.pO, aJj(fi, aCO, 1), xm.stroke(),
+			xm.fillStyle = aJQ, aJj(fi, aCO, 1), xm.fill(), xm.fillStyle = aJP, aJj(fi, aCO, vN), xm.fill(), xm.strokeStyle = bE.pO, __fx.settings.smoothUI && (xm.strokeStyle = "rgba(255, 255, 255, 0.3)", xm.lineJoin = "round"), aJj(fi, aCO, 1),
+				xm.stroke(), xm.lineJoin = "miter",
 				function(aJl, fi) {
 					bD.sM.textAlign(xm, 1), bD.sM.textBaseline(xm, 1), xm.font = aAH, xm.fillStyle = bE.pO, xm.fillText(aJl, Math.floor(.5 * i.j), Math.floor(fi + .58 * aAI))
 				}(title, fi)
 		}(L(144), fi, 3, aJJ / 100),
 		function(fg, fi, j, k, aHE) {
-			xm.fillStyle = bE.pJ, xm.fillRect(fg, fi, j, k), xm.lineWidth = 3, xm.strokeStyle = bE.pO, xm.strokeRect(fg, fi, j, k);
+			xm.fillStyle = bE.pJ, xm.beginPath(), __fx.settings.smoothUI && xm.roundRect ? xm.roundRect(fg, fi, j, k, .1 * k) : xm.rect(fg, fi, j, k), xm.fill(), xm.lineWidth = 3, xm.strokeStyle = __fx.settings.smoothUI ?
+				"rgba(255, 255, 255, 0.3)" : bE.pO, xm.stroke();
 			var fZ = Math.floor(.3 * k);
 			bD.sM.textAlign(xm, 1), bD.sM.textBaseline(xm, 1), xm.font = bD.sM.u7(0, fZ), xm.fillStyle = bE.pO, xm.fillText(aHE, Math.floor(fg + j / 2), Math.floor(fi + k / 2 + .1 * fZ))
 		}(fg, fi + aAI + bf.gap, aJM, aJN, L(43))
@@ -9911,7 +9921,7 @@ function aRR() {
 	}
 
 	function aVG(vP, color) {
-		v2.oy[vP].sg(color ? bE.pn : bE.qe)
+		v2.oy[vP].sg(color ? bE.pn : bE.qe), v2.oy[vP].button.classList.toggle("fx-selected", !!color)
 	}
 	this.aIN = function() {
 			return aVA.vD
