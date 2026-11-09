@@ -1950,7 +1950,7 @@ function vI(t6) {
 					var tM = wb.cloneNode(!0),
 						w9 = tM.firstChild;
 					w9.style.backgroundColor = wc[eJ < 0 ? 15 : Math.min(eJ, 14)], 0 <= eJ && (w9.textContent = "" + (eJ + 1));
-					tM.lastChild.textContent = bq.lk.ws(sH, wr), __fx.settings.highlightDuplicateIps && (w9 = __fx.utils.getDuplicateIpHighlightColor(sH, bq.wh.w4, aGc)) && (tM.style.backgroundColor = w9, tM.style.borderRadius = "0.3em");
+					tM.lastChild.textContent = bq.lk.ws(sH, wr), __fx.settings.highlightDuplicateIps && (w9 = __fx.utils.getDuplicateIpHighlightColor(sH, bq.wh.w4, "aGc")) && (tM.style.backgroundColor = w9, tM.style.borderRadius = "0.3em");
 					__fx.settings.highlightSameClan && (eJ = __fx.utils.getSameClanHighlightColor(sH, bq.aGF, "username")) && (tM.style.backgroundColor ? tM.style.boxShadow = "inset 0 0 0 2px " + eJ : tM.style.backgroundColor = eJ, tM.style
 						.borderRadius = "0.3em");
 					tM.style.color = bq.lk.wt(sH.wu), 11 === sH.wu && (tM.style.textShadow = "-1px -1px 0 lightgray,1px -1px 0 lightgray,-1px 1px 0 lightgray,1px 1px 0 lightgray");
