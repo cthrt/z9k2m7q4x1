@@ -3,15 +3,15 @@
         const missing = [];
         if (typeof aE === "undefined" || !aE) missing.push("aE");
         if (typeof ah === "undefined" || !ah) missing.push("ah");
-        if (typeof bD === "undefined" || !bD || !bD.gw) missing.push("bD.gv");
-        if (typeof bv === "undefined" || !bv) missing.push("bv");
+        if (typeof bD === "undefined" || !bD || !bD.gy) missing.push("bD.gy");
+        if (typeof bw === "undefined" || !bw) missing.push("bw");
         if (typeof ae === "undefined" || !ae) missing.push("ae");
-        if (typeof bB === "undefined" || !bB || !bB.i1) missing.push("bB.i1");
+        if (typeof bB === "undefined" || !bB || !bB.i3) missing.push("bB.i3");
         if (typeof aS === "undefined" || !aS) missing.push("aS");
         if (typeof ad === "undefined" || !ad) missing.push("ad");
         if (typeof bP === "undefined" || !bP) missing.push("bP");
-        if (typeof b1 === "undefined" || !b1 || !b1.z || !b1.aAA) missing.push("b1.z/b1.aAA");
-        if (typeof bi === "undefined" || !bi || typeof bi.ef !== "function") missing.push("bi.ee");
+        if (typeof b1 === "undefined" || !b1 || !b1.z || !b1.aAR) missing.push("b1.z/b1.aAR");
+        if (typeof bi === "undefined" || !bi || typeof bi.eh !== "function") missing.push("bi.eh");
         if (typeof aF === "undefined" || !aF) missing.push("aF");
         if (typeof bg === "undefined" || !bg) missing.push("bg");
         if (typeof bV === "undefined" || !bV) missing.push("bV");
@@ -30,50 +30,50 @@
             const __fx = window.__fx;
 
             const o = {
-    get bI() { return aE.fX },
-    get cF() { return aE.kw },
-    get co() { return aE.fK },
-    get kg() { return aE.lG },
-    get ke() { return aE.hj },
-    get fW() { return aE.lE },
-    get fS() { return aE.o2 },
-    get db() { return aE.hz },
-    get x1() { return aE.a3L },
-    get fT() { return aE.a0c }
+    get bI() { return aE.fZ },
+    get cF() { return aE.ky },
+    get co() { return aE.fM },
+    get kg() { return aE.lI },
+    get ke() { return aE.hl },
+    get fW() { return aE.lG },
+    get fS() { return aE.o4 },
+    get db() { return aE.i1 },
+    get x1() { return aE.a3c },
+    get fT() { return aE.a0t }
 };
 const eF = {
-    get aOq() { return ah.hG },
-    get fQ() { return ah.hO },
-    get fa() { return ah.hc },
-    get hu() { return ah.nY },
-    get eG() { return ah.jU },
-    get eJ() { return ah.jW },
-    get eH() { return ah.jV },
-    get eK() { return ah.jX }
+    get aOq() { return ah.hI },
+    get fQ() { return ah.hQ },
+    get fa() { return ah.he },
+    get hu() { return ah.na },
+    get eG() { return ah.jW },
+    get eJ() { return ah.jY },
+    get eH() { return ah.jX },
+    get eK() { return ah.jZ }
 };
-const w = { cO: { iT: (...args) => bD.gw.hm(...args), iV: (...args) => bD.gw.hn(...args), jD: (...args) => bD.gw.n6(...args) } };
-const jG = { jH: (...args) => bv.fT(...args), aQO: (...args) => bv.i7(...args), aQP: (...args) => bv.iA(...args) };
-const lF = { cY: (...args) => ae.kH(...args), cL: (...args) => ae.hd(...args), ca: (...args) => ae.gh(...args) };
-const pH = { a2J: { a7g: (...args) => bB.i1.i8(...args), a7e: (...args) => bB.i1.rA(...args), aKX: (...args) => bB.i1.i2(...args) } };
-const kX = { a7h: (...args) => aS.i5(...args) };
+const w = { cO: { iT: (...args) => bD.gy.ho(...args), iV: (...args) => bD.gy.hp(...args), jD: (...args) => bD.gy.n8(...args) } };
+const jG = { jH: (...args) => bw.fV(...args), aQO: (...args) => bw.i9(...args), aQP: (...args) => bw.iC(...args) };
+const lF = { cY: (...args) => ae.kJ(...args), cL: (...args) => ae.hf(...args), ca: (...args) => ae.gj(...args) };
+const pH = { a2J: { a7g: (...args) => bB.i3.iA(...args), a7e: (...args) => bB.i3.rC(...args), aKX: (...args) => bB.i3.i4(...args) } };
+const kX = { a7h: (...args) => aS.i7(...args) };
 const ee = {
-    get iH() { return ad.fc },
-    mR: (...args) => ad.a1S(...args),
-    lb: (...args) => ad.fR(...args),
-    mQ: (...args) => ad.a13(...args),
-    lZ: (...args) => ad.hA(...args),
-    la: (...args) => ad.fS(...args),
-    wd: (...args) => ad.a1V(...args),
-    we: (...args) => ad.a1W(...args),
-    lV: (...args) => ad.fV(...args),
-    mU: (...args) => ad.k7(...args),
-    sV: (...args) => ad.a1S(...args)
+    get iH() { return ad.fe },
+    mR: (...args) => ad.a1j(...args),
+    lb: (...args) => ad.fT(...args),
+    mQ: (...args) => ad.a1K(...args),
+    lZ: (...args) => ad.hC(...args),
+    la: (...args) => ad.fU(...args),
+    wd: (...args) => ad.a1m(...args),
+    we: (...args) => ad.a1n(...args),
+    lV: (...args) => ad.fX(...args),
+    mU: (...args) => ad.k9(...args),
+    sV: (...args) => ad.a1j(...args)
 };
-const eN = { ed: (...args) => bP.fx(...args), aCm: (...args) => bP.jJ(...args) };
-const f2 = { aw: { a5e: (...args) => b1.z.eg(...args), get p4() { return b1.z.a4j }, aA7: (...args) => b1.z.a5F(...args) } };
-const dY = { get p5() { return bi.a3Y == null ? null : { get ww() { return bi.a3Y.aLA } } }, hw: (...args) => bi.kt(...args) };
-const ar = aF, cQ = { get cl() { return bg.nU } }, p = { get eP() { return bV.fl }, get eQ() { return bV.fm }, get eR() { return bV.fG } };
-const __fxAttackHost = bB.i1, __fxAttackName = "i8";
+const eN = { ed: (...args) => bP.fz(...args), aCm: (...args) => bP.jL(...args) };
+const f2 = { aw: { a5e: (...args) => b1.z.ei(...args), get p4() { return b1.z.a4z }, aA7: (...args) => b1.z.a5V(...args) } };
+const dY = { get p5() { return bi.a3p == null ? null : { get ww() { return bi.a3p.aLM } } }, hw: (...args) => bi.kv(...args) };
+const ar = aF, cQ = { get cl() { return bg.nW } }, p = { get eP() { return bV.fn }, get eQ() { return bV.fo }, get eR() { return bV.fI } };
+const __fxAttackHost = bB.i3, __fxAttackName = "iA";
 
             const __fxOriginalAttack=__fxAttackHost[__fxAttackName];__fxAttackHost[__fxAttackName]=function(amount,target,...args){const player=o.co,balance=Math.max(0,Math.floor(Number(eF.fa[player])||0)),result=__fxOriginalAttack.call(this,amount,target,...args);__fx.autoOpening.onAttackApplied?.({local:true,neutral:Number(target)===o.bI,attackerId:player,targetId:Number(target),amount:Number(amount),troops:Math.floor(balance*(Number(amount)+1)/1024),tick:(Number.isFinite(__fx.currentGameTick)?__fx.currentGameTick:0)+1});return result};
 const __fxHasBorderState=player=>Number.isInteger(player)&&player>=0&&player<o.bI&&eF.aOq!=null&&eF.aOq[player]!=null;
@@ -100,10 +100,10 @@ __fx.autoOpening.messiah={getState:()=>{const player=o.co;return{playerAlive:__f
 const __fxGetAutoSpawnStatus=()=>{const player=o.co,connected=o.kg||f2.aw.a5e(f2.aw.p4),selectableSpawn=Boolean(o.db&&w.cO.iT(0)),ready=connected&&selectableSpawn&&!o.ke&&Number.isInteger(player)&&player>=0&&player<o.bI&&eF.hu[player]!==0;if(!ready)return{ready:false,singleplayer:o.kg,connected:connected,selectableSpawn:selectableSpawn};const selectionStep=Number.isInteger(dY.p5&&dY.p5.ww)?dY.p5.ww:null,selectionMax=Number.isInteger(o.x1)?o.x1:null,currentSpawn=eF.fQ[player]>0?{x:(eF.eG[player]+eF.eH[player])>>1,y:(eF.eJ[player]+eF.eK[player])>>1}:null;return{ready:true,singleplayer:o.kg,connected:connected,selectableSpawn:selectableSpawn,gameMode:o.fW,mapId:p.eR,isOneVsOne:o.fW===8,currentSpawn:currentSpawn,selectionStep:selectionStep,selectionMax:selectionMax,selectionRemaining:selectionStep===null||selectionMax===null?null:Math.max(0,selectionMax-selectionStep)}};__fx.autoSpawn={getStatus:__fxGetAutoSpawnStatus,getState:()=>{const status=__fxGetAutoSpawnStatus();if(!status.ready)return status;const player=o.co,width=p.eP,height=p.eQ,freeLand=new Uint8Array(width*height),ownableLand=new Uint8Array(width*height),spawns=[];for(let y=0;y<height;y++)for(let x=0;x<width;x++){const pixel=ee.mQ(x,y),ownable=ee.lV(pixel);ownableLand[y*width+x]=ownable?1:0;freeLand[y*width+x]=ownable&&(!ee.mU(pixel)||ee.sV(player,pixel))?1:0}for(let id=0;id<o.bI;id++)if(id!==player&&eF.fQ[id]>0)spawns.push({id:id,x:(eF.eG[id]+eF.eH[id])>>1,y:(eF.eJ[id]+eF.eK[id])>>1,land:eF.fQ[id],human:id<o.cF,bot:id>=o.cF});return{...status,width:width,height:height,freeLand:freeLand,ownableLand:ownableLand,spawns:spawns,humanCount:o.cF,playerCount:o.cF,entityCount:o.bI}},spawn:(x,y)=>{const player=o.co,px=Math.round(Number(x)),py=Math.round(Number(y));if(!o.db||o.ke||(!o.kg&&!f2.aw.a5e(f2.aw.p4))||!Number.isInteger(px)||!Number.isInteger(py)||px<0||py<0||px>=p.eP||py>=p.eQ||!w.cO.iT(0)||!w.cO.iV(player))return false;const pixel=ee.mQ(px,py);if(!ee.lV(pixel)||ee.mU(pixel))return false;const cell=eN.ed(px,py);return eN.aCm(cell)?(o.kg||f2.aw.aA7(f2.aw.p4),pH.a2J.aKX(cell),true):false}};
 const __fxDecodedAutoSpawnState=__fx.autoSpawn.getState;__fx.autoSpawn.getState=()=>{const state=__fxDecodedAutoSpawnState();if(!state?.ready)return state;for(const spawn of state.spawns){spawn.human=spawn.id<o.cF;spawn.bot=spawn.id>=o.cF}state.humanCount=o.cF;state.playerCount=o.cF;state.entityCount=o.bI;return state};
 
-            const __fxOriginalTick = bi.ef;
-            bi.ef = function () {
+            const __fxOriginalTick = bi.eh;
+            bi.eh = function () {
                 const result = __fxOriginalTick.apply(this, arguments);
-                const tick = bi.kt();
+                const tick = bi.kv();
                 __fx.currentGameTick = tick;
                 try {
                     __fx.autoOpening?.onTick?.(tick);
@@ -113,9 +113,9 @@ const __fxDecodedAutoSpawnState=__fx.autoSpawn.getState;__fx.autoSpawn.getState=
                 return result;
             };
 
-            if (b1.aAA && typeof b1.aAA.aYF === "function") {
-                const __fxOriginalDecode = b1.aAA.aYF;
-                b1.aAA.aYF = function (...args) {
+            if (b1.aAR && typeof b1.aAR.aYX === "function") {
+                const __fxOriginalDecode = b1.aAR.aYX;
+                b1.aAR.aYX = function (...args) {
                     const result = __fxOriginalDecode.apply(this, args);
                     try {
                         __fx.autoSpawnController?.onDecodedPacket?.(this, args[1]);
