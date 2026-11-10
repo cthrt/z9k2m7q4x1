@@ -6,11 +6,11 @@
         if (typeof bD === "undefined" || !bD || !bD.gw) missing.push("bD.gv");
         if (typeof bv === "undefined" || !bv) missing.push("bv");
         if (typeof ae === "undefined" || !ae) missing.push("ae");
-        if (typeof bB === "undefined" || !bB || !bB.i0) missing.push("bB.hz");
+        if (typeof bB === "undefined" || !bB || !bB.i1) missing.push("bB.i1");
         if (typeof aS === "undefined" || !aS) missing.push("aS");
         if (typeof ad === "undefined" || !ad) missing.push("ad");
         if (typeof bP === "undefined" || !bP) missing.push("bP");
-        if (typeof b1 === "undefined" || !b1 || !b1.z || !b1.a9w) missing.push("b1.z/b1.a9h");
+        if (typeof b1 === "undefined" || !b1 || !b1.z || !b1.aAA) missing.push("b1.z/b1.aAA");
         if (typeof bi === "undefined" || !bi || typeof bi.ef !== "function") missing.push("bi.ee");
         if (typeof aF === "undefined" || !aF) missing.push("aF");
         if (typeof bg === "undefined" || !bg) missing.push("bg");
@@ -31,49 +31,49 @@
 
             const o = {
     get bI() { return aE.fX },
-    get cF() { return aE.kv },
+    get cF() { return aE.kw },
     get co() { return aE.fK },
-    get kg() { return aE.lF },
+    get kg() { return aE.lG },
     get ke() { return aE.hj },
-    get fW() { return aE.lD },
-    get fS() { return aE.o1 },
-    get db() { return aE.hy },
-    get x1() { return aE.a3F },
-    get fT() { return aE.a0Y }
+    get fW() { return aE.lE },
+    get fS() { return aE.o2 },
+    get db() { return aE.hz },
+    get x1() { return aE.a3L },
+    get fT() { return aE.a0c }
 };
 const eF = {
     get aOq() { return ah.hG },
     get fQ() { return ah.hO },
     get fa() { return ah.hc },
-    get hu() { return ah.nX },
-    get eG() { return ah.jT },
-    get eJ() { return ah.jV },
-    get eH() { return ah.jU },
-    get eK() { return ah.jW }
+    get hu() { return ah.nY },
+    get eG() { return ah.jU },
+    get eJ() { return ah.jW },
+    get eH() { return ah.jV },
+    get eK() { return ah.jX }
 };
-const w = { cO: { iT: (...args) => bD.gw.hl(...args), iV: (...args) => bD.gw.hm(...args), jD: (...args) => bD.gw.n5(...args) } };
-const jG = { jH: (...args) => bv.fT(...args), aQO: (...args) => bv.i6(...args), aQP: (...args) => bv.i9(...args) };
-const lF = { cY: (...args) => ae.kG(...args), cL: (...args) => ae.hd(...args), ca: (...args) => ae.gh(...args) };
-const pH = { a2J: { a7g: (...args) => bB.i0.i7(...args), a7e: (...args) => bB.i0.r5(...args), aKX: (...args) => bB.i0.i1(...args) } };
-const kX = { a7h: (...args) => aS.i4(...args) };
+const w = { cO: { iT: (...args) => bD.gw.hm(...args), iV: (...args) => bD.gw.hn(...args), jD: (...args) => bD.gw.n6(...args) } };
+const jG = { jH: (...args) => bv.fT(...args), aQO: (...args) => bv.i7(...args), aQP: (...args) => bv.iA(...args) };
+const lF = { cY: (...args) => ae.kH(...args), cL: (...args) => ae.hd(...args), ca: (...args) => ae.gh(...args) };
+const pH = { a2J: { a7g: (...args) => bB.i1.i8(...args), a7e: (...args) => bB.i1.rA(...args), aKX: (...args) => bB.i1.i2(...args) } };
+const kX = { a7h: (...args) => aS.i5(...args) };
 const ee = {
     get iH() { return ad.fc },
-    mR: (...args) => ad.a1O(...args),
+    mR: (...args) => ad.a1S(...args),
     lb: (...args) => ad.fR(...args),
-    mQ: (...args) => ad.a0z(...args),
+    mQ: (...args) => ad.a13(...args),
     lZ: (...args) => ad.hA(...args),
     la: (...args) => ad.fS(...args),
-    wd: (...args) => ad.a1R(...args),
-    we: (...args) => ad.a1S(...args),
+    wd: (...args) => ad.a1V(...args),
+    we: (...args) => ad.a1W(...args),
     lV: (...args) => ad.fV(...args),
-    mU: (...args) => ad.k6(...args),
-    sV: (...args) => ad.a1O(...args)
+    mU: (...args) => ad.k7(...args),
+    sV: (...args) => ad.a1S(...args)
 };
-const eN = { ed: (...args) => bP.fx(...args), aCm: (...args) => bP.jI(...args) };
-const f2 = { aw: { a5e: (...args) => b1.z.eg(...args), get p4() { return b1.z.a4d }, aA7: (...args) => b1.z.a59(...args) } };
-const dY = { get p5() { return bi.a3S == null ? null : { get ww() { return bi.a3S.aKK } } }, hw: (...args) => bi.ks(...args) };
-const ar = aF, cQ = { get cl() { return bg.nT } }, p = { get eP() { return bV.fl }, get eQ() { return bV.fm }, get eR() { return bV.fG } };
-const __fxAttackHost = bB.i0, __fxAttackName = "i7";
+const eN = { ed: (...args) => bP.fx(...args), aCm: (...args) => bP.jJ(...args) };
+const f2 = { aw: { a5e: (...args) => b1.z.eg(...args), get p4() { return b1.z.a4j }, aA7: (...args) => b1.z.a5F(...args) } };
+const dY = { get p5() { return bi.a3Y == null ? null : { get ww() { return bi.a3Y.aLA } } }, hw: (...args) => bi.kt(...args) };
+const ar = aF, cQ = { get cl() { return bg.nU } }, p = { get eP() { return bV.fl }, get eQ() { return bV.fm }, get eR() { return bV.fG } };
+const __fxAttackHost = bB.i1, __fxAttackName = "i8";
 
             const __fxOriginalAttack=__fxAttackHost[__fxAttackName];__fxAttackHost[__fxAttackName]=function(amount,target,...args){const player=o.co,balance=Math.max(0,Math.floor(Number(eF.fa[player])||0)),result=__fxOriginalAttack.call(this,amount,target,...args);__fx.autoOpening.onAttackApplied?.({local:true,neutral:Number(target)===o.bI,attackerId:player,targetId:Number(target),amount:Number(amount),troops:Math.floor(balance*(Number(amount)+1)/1024),tick:(Number.isFinite(__fx.currentGameTick)?__fx.currentGameTick:0)+1});return result};
 const __fxHasBorderState=player=>Number.isInteger(player)&&player>=0&&player<o.bI&&eF.aOq!=null&&eF.aOq[player]!=null;
@@ -103,7 +103,7 @@ const __fxDecodedAutoSpawnState=__fx.autoSpawn.getState;__fx.autoSpawn.getState=
             const __fxOriginalTick = bi.ef;
             bi.ef = function () {
                 const result = __fxOriginalTick.apply(this, arguments);
-                const tick = bi.ks();
+                const tick = bi.kt();
                 __fx.currentGameTick = tick;
                 try {
                     __fx.autoOpening?.onTick?.(tick);
@@ -113,9 +113,9 @@ const __fxDecodedAutoSpawnState=__fx.autoSpawn.getState;__fx.autoSpawn.getState=
                 return result;
             };
 
-            if (b1.a9w && typeof b1.a9w.aXP === "function") {
-                const __fxOriginalDecode = b1.a9w.aXP;
-                b1.a9w.aXP = function (...args) {
+            if (b1.aAA && typeof b1.aAA.aYF === "function") {
+                const __fxOriginalDecode = b1.aAA.aYF;
+                b1.aAA.aYF = function (...args) {
                     const result = __fxOriginalDecode.apply(this, args);
                     try {
                         __fx.autoSpawnController?.onDecodedPacket?.(this, args[1]);
